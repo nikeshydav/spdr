@@ -1,0 +1,244 @@
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	.scrollButtons.right {
+    right: -22px;
+    z-index: 9999;
+}
+.scrollButtons.left {
+    left: -22px;
+    z-index: 9999;
+}
+
+
+}
+
+/* iPads, Tablet ----------- */
+@media only screen and (max-width:1000px)  {
+
+.stop_train_banner, .stow_suitcase_banner, .park_car_banner, .scrollContainer div.panel, .scroll, .game_container_shdow, .game_container	
+{
+	height:443px !important;
+}
+.content_header_login_txt {
+	text-align:left;
+	width:70%;
+}
+		
+ul.navigation li
+{
+	margin-top:20px;
+	margin-bottom:10px;
+	margin-right:20px;
+}
+ul.navigation
+{
+	margin-top:80px;
+}
+.privacy_lrg_container
+{
+	margin-top:575px;
+}
+.scrollButtons.right {
+    right: -22px;
+    z-index: 9999;
+}
+.scrollButtons.left {
+    left: -22px;
+    z-index: 9999;
+}
+.contactus_txtbox_container
+{
+	width:85%;
+}
+.mrgL25
+{
+	margin-left:0px !important;
+}
+.width235px
+{
+	width:100% !important;
+}
+.width205px
+{
+	width:85% !important;
+}
+}
+
+/* iPhone ----------- */
+@media only screen and (min-width : 320px) and (max-width : 540px) {
+.stop_train_banner, .stow_suitcase_banner, .park_car_banner, .scrollContainer div.panel, .scroll, .game_container_shdow, .game_container	
+{
+	height:230px !important;
+}
+.share_container {
+	width:82%;
+	margin-top:10px;
+}
+.share_txt {
+	width:45px;
+}
+.overlay_box_container {
+    background-color: #000000;
+    bottom: 0;
+	background-image:none;
+    float: left;
+    height: 54px;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+.overlay_box_container h1 {
+    color: #FFFFFF;
+    float: left;
+    font-size: 15px;
+    margin-left: 9px;
+    margin-top: 4px;
+    text-align: left;
+    width: 43%;
+}
+.overlay_box_container p 
+{
+	display:none;
+}
+.box_btn {
+    float: left;
+    position: absolute;
+    right: 9px;
+	z-index:9999;
+	margin:0px;
+    top: 8px;
+}
+.height252
+{
+	height:54px !important; 
+}
+.header_container
+{
+	height:auto;
+	margin-bottom:10px;
+}
+.spdr_logo 
+{
+	width:100%;
+	text-align:center;
+}
+
+#lightbox-panel
+{
+	position:absolute;
+	width:90%;
+	z-index:999999;
+	margin: 0 auto 0 3%;
+}
+.register_container
+{
+	width:87%;
+}
+.or_txt 
+{
+	width:80%;
+	text-align:center;
+	margin-bottom:20px;
+}
+.height285 
+{
+	height:54px !important; 
+}
+
+.content_header_login_txt {
+	text-align:left;
+	width:95%;
+	margin-top: 48px;
+}
+.login_btn {
+    position: absolute;
+    width: 95%;
+	text-align:center;
+}		
+		
+ul.navigation li
+{
+	margin-top:20px;
+	margin-bottom:10px;
+	margin-right:20px;
+	margin-left:20px;
+}
+ul.navigation
+{
+	margin-top:150px;
+}
+.showpp
+{
+	width:92%;
+}
+.contactus
+{
+	width:92%;
+}
+.submit_btn {
+    float: left;
+    margin-right: 13px;
+    margin-top: 11px;
+}
+.cancel_form {
+   
+    float: left;
+    margin-right: 25px;
+    margin-top: 18px;
+}
+.contactus_left_part
+{
+	width:100%;
+}
+.contactus_right_part
+{
+	width:85%;
+	margin-left:0px;
+}
+.privacy_lrg_container
+{
+	margin-top:847px;
+}
+.scrollButtons.right {
+	right: -5px;
+    top: 72px;
+    z-index: 9999;
+}
+.scrollButtons.left {
+    left: -5px;
+    top: 72px;
+    z-index: 9999;
+}
+.contactus_txtbox_container
+{
+	width:85%;
+}
+.mrgL25
+{
+	margin-left:0px !important;
+}
+.width235px
+{
+	width:100% !important;
+}
+.width205px
+{
+	width:85% !important;
+}
+#email-panel, #fb-panel, #gmail-panel
+{
+	width:95%;
+	right: 10px;
+	margin-left:0px;
+	top:170px;
+}
+.arrow-up-email {
+    right: 57.5%;
+}
+.arrow-up-fb {
+    right: 38.5%;
+}
+.arrow-up-gmail {
+    right: 29.5%;
+}
+}

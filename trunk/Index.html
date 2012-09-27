@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SPDR | State Street Global Advisors</title>
+<link REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/media_queries.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.js"></script>
+<!-- Javascript for Hover thumb -->
+<script type="text/javascript">
+			$(document).ready(function(){
+				$('.img_thumb').hover(function(){
+					$(".cover", this).stop().animate({top:'195px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'267px'},{queue:false,duration:160});
+				});
+			});
+</script>
+<!-- Javascript for Forgetpassword Show Thank you page -->
+<script type="text/javascript">
+			$(document).ready(function(){
+				$("#show-panel").click(function(){
+				  $("#regcontainer").show();
+				  $("#showfrgtpsw").hide();
+				  $("#thankyou").hide();
+				  $("body").css("overflow", "hidden");								 
+					$("#lightbox, #lightbox-panel").fadeIn(300);
+				})
+				$(".close-panel").click(function(){
+					$("#lightbox, #lightbox-panel").fadeOut(300);
+					$("body").css("overflow", "auto");
+				})
+			})
+</script>
+<!-- Javascript for upper email panel -->
+<script type="text/javascript">
+			$(document).ready(function(){
+				$("#show-email").click(function(){
+					$("#emailbox_backlight, #email-panel").fadeIn(300);
+					$(".email_icon").addClass('email_icon_active');
+				})
+				$(".close-email-panel").click(function(){
+					$("#emailbox_backlight, #email-panel").fadeOut(300);
+					$(".email_icon").removeClass('email_icon_active');
+				})
+			})
+</script>
+<!-- Javascript for upper fb panel -->
+<script type="text/javascript">
+			$(document).ready(function(){
+				$("#show-fb").click(function(){
+					$("#emailbox_backlight, #fb-panel").fadeIn(300);
+					$(".twitter_icon").addClass('twitter_icon_active');
+				})
+				$(".close-email-panel").click(function(){
+					$("#emailbox_backlight, #fb-panel").fadeOut(300);
+					$(".twitter_icon").removeClass('twitter_icon_active');
+				})
+			})
+</script>
+<!-- Javascript for upper gmail panel -->
+<script type="text/javascript">
+			$(document).ready(function(){
+				$("#show-gmail").click(function(){
+					$("#emailbox_backlight, #gmail-panel").fadeIn(300);
+					$(".gmail_icon").addClass('gmail_icon_active');
+				})
+				$(".close-email-panel").click(function(){
+					$("#emailbox_backlight, #gmail-panel").fadeOut(300);
+					$(".gmail_icon").removeClass('gmail_icon_active');
+				})
+			})
+</script>
+<script src="js/jquery_002.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/coda-slider.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div class="header_container">
+  <div class="center_container">
+    <div class="spdr_logo"><a href="Index.html"><img src="images/spdr_logo.png" alt="SPDR Logo"/></a></div>
+    <div class="share_container">
+      <div class="share_txt">SHARE</div>
+      <div class="share_bg">
+        <div id="show-email" class="email_icon"></div>
+        </a></div>
+      <div class="share_bg">
+        <div class="fb_icon"></div>
+      </div>
+      <div class="share_bg">
+        <div id="show-fb" class="twitter_icon"></div>
+      </div>
+      <div class="share_bg">
+        <div  id="show-gmail" class="gmail_icon"></div>
+      </div>
+    </div>
+    <!-- close share container -->
+  </div>
+  <!-- close center container -->
+</div>
+<!-- close header container -->
+<div class="game_container">
+  <div class="game_container_shdow">
+    <div class="center_container">
+      <div id="email-panel">
+        <div class="arrow-up arrow-up-email"></div>
+        <a class="close-email-panel">
+        <div class="light_box_cross_btn"><span>Close</span> <img src="images/cross_btn.png"/></div>
+        </a>
+        <div class="email_container">
+          <div class="email_header">
+            <div class="email_header_left">
+              <h3>share this page by email:</h3>
+              <h1>ARE YOU AS PRECISE <br/>
+                AS A SPDR ETF?</h1>
+            </div>
+            <div class="email_header_right">
+              <div class="email_header_right_content"> The information entered on this page will not be used to send unsolicited email, and will not be sold to a third party. Please read our <a href="#" target="_blank">Privacy Policy</a> below. </div>
+            </div>
+          </div>
+          <!--close email header -->
+          <div class="email_header_left">
+            <div class="requiredfild_txt mrgL20"><span class="red">*</span> Required Fields. <em>(Separate multiple addresses with commas.)</em> </div>
+            <div class="email_lbl_txt_con">
+              <div class="email_txt_lbl">Your Name: <span class="red">*</span> </div>
+              <input type="text"/>
+            </div>
+            <div class="email_lbl_txt_con">
+              <div class="email_txt_lbl">Your Email: <span class="red">*</span> </div>
+              <input type="text"/>
+            </div>
+            <div class="email_lbl_txt_con">
+              <div class="email_txt_lbl">Recipient’s Email: <span class="red">*</span> </div>
+              <input type="text"/>
+            </div>
+            <div class="email_lbl_txt_con width95perc">
+              <div class="email_txt_lbl"><em>Add a custom message: Please limit your message to 500 characters.</em> </div>
+              <textarea></textarea>
+            </div>
+            <div class="email_lbl_txt_con width95perc">
+              <div class="email_txt_lbl font12 fontnormal mrgB10">Please enter the words you see in the box, in order and separated by a space. <span class="red">*</span></div>
+              <img src="images/captcha.jpg"/> </div>
+          </div>
+          <!-- close email header left -->
+          <div class="email_header_right">
+            <div class="preview_email">Preview of the email</div>
+            <div class="preview_email_img"><img src="images/email_preview.jpg"/></div>
+            <div class="submit_btn mrgT20">
+              <input id="showemailsent" type="button"/>
+            </div>
+            <div class="cancel_email"><a class="close-email-panel" href="#">Cancel</a></div>
+          </div>
+          <!-- close email header right -->
+        </div>
+        <!-- close email container -->
+        <div id="emailsent">
+          <div class="email_header">
+            <div class="email_header_left">
+              <h3>share this page by email:</h3>
+              <h1>ARE YOU AS PRECISE <br/>
+                AS A SPDR ETF?</h1>
+            </div>
+            <div class="email_header_right"> </div>
+          </div>
+          <!--close email header -->
+          <div class="email_header_left">
+            <h3 class="mrgL20">Thank you.<br/>
+              your email haS been sent.</h3>
+            <div class="email_lbl_txt_con">
+              <div class="email_txt_lbl">To</div>
+            </div>
+            <div class="email_sent_recp"> recipient1name@domainname.com </div>
+            <div class="email_sent_recp"> recipient2name@domainname.com </div>
+            <div class="email_sent_recp"> recipient3name@domainname.com </div>
+            <div class="email_sent_recp"> recipient4name@domainname.com </div>
+            <div class="send_again">
+              <input id="sendagain" type="button"/>
+            </div>
+          </div>
+          <!-- close email header left -->
+          <div class="email_header_right">
+            <div class="preview_email">Preview of the email</div>
+            <div class="preview_email_img"><img src="images/email_preview.jpg"/></div>
+          </div>
+          <!-- close email header right -->
+        </div>
+        <!-- close email sent -->
+      </div>
+      <!-- close email panel -->
+      <div id="emailbox_backlight"></div>
+      <!-- /lightbox -->
+      <div id="fb-panel">
+        <div class="arrow-up arrow-up-fb"></div>
+        <a class="close-email-panel">
+        <div class="light_box_cross_btn"><span>Close</span> <img src="images/cross_btn.png"/></div>
+        </a>
+        <div class="fb_link"> <img src="images/fb_btns.png"/> </div>
+      </div>
+      <!-- close fb panel -->
+      <div id="emailbox_backlight"></div>
+      <!-- /lightbox -->
+      <div id="gmail-panel">
+        <div class="arrow-up arrow-up-gmail"></div>
+        <a class="close-email-panel">
+        <div class="light_box_cross_btn"><span>Close</span> <img src="images/cross_btn.png"/></div>
+        </a>
+        <div class="gmail_link"> <img src="images/gmail_btns.png"/> </div>
+      </div>
+      <!-- close fb panel -->
+      <div id="emailbox_backlight"></div>
+      <!-- /lightbox -->
+      <div id="slider"> 
+        <div class="scroll">
+          <div class="scrollContainer">
+            <div class="panel" id="stoptrain">
+              <div class="stop_train_banner">
+                <div class="overlay_box_container">
+                  <h1>stop the train <br/>
+                    in front of <br/>
+                    the commuters.</h1>
+                  <p>Once the train starts moving, click the “stop” button to make the doors open in the right place.</p>
+                  <div class="box_btn">
+                    <div class="btn"><a href="#">START</a></div>
+                  </div>
+                </div>
+              </div>
+              <!-- close stop train banner -->
+            </div>
+            <!-- 1 -->
+            <div class="panel" id="stowsuitcase">
+              <div class="stow_suitcase_banner">
+                <div class="overlay_box_container height285">
+                  <h1>Stow the suitcase.</h1>
+                  <p class="fix_stow_suitcase">To fit the suitcase into the overhead compartment, move the other objects around with your cursor.</p>
+                  <div class="box_btn">
+                    <div class="btn"><a href="#">START</a></div>
+                  </div>
+                </div>
+              </div>
+              <!-- close stop train banner -->
+            </div>
+            <!-- 1 -->
+            <div class="panel" id="parkcar">
+              <div class="park_car_banner">
+                <div class="overlay_box_container height252">
+                  <h1>Park the Car.</h1>
+                  <p>With your cursor, parallel park the car without hitting anything.</p>
+                  <div class="box_btn">
+                    <div class="btn"><a href="#">START</a></div>
+                  </div>
+                </div>
+              </div>
+              <!-- close stop train banner -->
+            </div>
+            <!-- 1 -->
+          </div>
+        </div>
+        <ul class="navigation">
+          <li> <a href="#stoptrain">
+            <div class="stop_train_thumb img_thumb">
+              <div class="cover boxcaption">
+                <div class="view_lb">
+                  <div class="view_lb_arrw">&nbsp;</div>
+                  <div class="view_lb_txt">View Leaderboard</div>
+                </div>
+                <!-- close view lb -->
+                <div class="view_lb_detail">
+                  <div class="view_lb_score_container width100px">
+                    <div class="green_txt">All Plays</div>
+                    <div class="view_lb_score">1470</div>
+                  </div>
+                  <div class="view_lb_score_container">
+                    <div class="green_txt mrgL25">Wins</div>
+                    <div class="view_lb_score">320</div>
+                  </div>
+                  <div class="view_lb_score_container">
+                    <div class="green_txt">Losses</div>
+                    <div class="view_lb_score">1150</div>
+                  </div>
+                </div>
+                <!-- close viw lb detail -->
+              </div>
+            </div>
+            <!-- stop train thumb-->
+            </a> </li>
+          <li> <a href="#stowsuitcase">
+            <div class="stow_suitcase_thumb img_thumb">
+              <div class="cover boxcaption">
+                <div class="view_lb">
+                  <div class="view_lb_arrw">&nbsp;</div>
+                  <div class="view_lb_txt">View Leaderboard</div>
+                </div>
+                <!-- close view lb -->
+                <div class="view_lb_detail">
+                  <div class="view_lb_score_container width100px">
+                    <div class="green_txt">All Plays</div>
+                    <div class="view_lb_score">1470</div>
+                  </div>
+                  <div class="view_lb_score_container">
+                    <div class="green_txt mrgL25">Wins</div>
+                    <div class="view_lb_score">320</div>
+                  </div>
+                  <div class="view_lb_score_container">
+                    <div class="green_txt">Losses</div>
+                    <div class="view_lb_score">1150</div>
+                  </div>
+                </div>
+                <!-- close viw lb detail -->
+              </div>
+            </div>
+            </a> </li>
+          <li> <a href="#parkcar">
+            <div class="park_card_thumb img_thumb">
+              <div class="cover boxcaption">
+                <div class="view_lb">
+                  <div class="view_lb_arrw">&nbsp;</div>
+                  <div class="view_lb_txt">View Leaderboard</div>
+                </div>
+                <!-- close view lb -->
+                <div class="view_lb_detail">
+                  <div class="view_lb_score_container width100px">
+                    <div class="green_txt">All Plays</div>
+                    <div class="view_lb_score">1470</div>
+                  </div>
+                  <div class="view_lb_score_container">
+                    <div class="green_txt mrgL25">Wins</div>
+                    <div class="view_lb_score">320</div>
+                  </div>
+                  <div class="view_lb_score_container">
+                    <div class="green_txt">Losses</div>
+                    <div class="view_lb_score">1150</div>
+                  </div>
+                </div>
+                <!-- close viw lb detail -->
+              </div>
+            </div>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+    <!--- close center container -->
+  </div>
+  <!-- close game container shadow -->
+</div>
+<!-- close game container -->
+<div class="content_bg">
+  <div class="center_container">
+    <div class="content_header_login_container">
+      <div class="content_header_login_txt">Log in to save your score and see how you Rank with other players.</div>
+      <div class="login_btn"><a id="show-panel" href="#"><img src="images/login_btn.png"/></a></div>
+      <div id="lightbox-panel">
+        <div class="light_box_hdr_shdw"></div>
+        <a class="close-panel">
+        <div class="light_box_cross_btn"><span>Close</span> <img src="images/cross_btn.png"/></div>
+        </a>
+        <div id="regcontainer">
+          <div class="fb_btn_contnr">
+            <div class="fb_btn"><img src="images/fb.png"/></div>
+          </div>
+          <div class="register_container">
+            <div class="heading">Register</div>
+            <div class="requirefield"><span class="red">*</span> Required Fields</div>
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">Desired User Name <span class="red">*</span></div>
+              <input type="text">
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">Email <span class="red">*</span></div>
+              <input type="text">
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">Confirm Email <span class="red">*</span></div>
+              <input type="text">
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">Password <span class="red">*</span></div>
+              <input type="password">
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">Confirm Password <span class="red">*</span></div>
+              <input type="password">
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="submit_btn submit_btn_regis">
+                <input id="showthankyou" type="button"/>
+              </div>
+              <a class="close-panel"> <div class="cancel_regis">Cancel</div></a>
+            </div>
+            <!-- close txt label container -->
+          </div>
+          <!-- close registration container -->
+          <div class="or_txt">OR</div>
+          <div class="register_container">
+            <div class="heading">Log in</div>
+            <div class="requirefield"></div>
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">User Name <span class="red">*</span></div>
+              <input type="text">
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">Password <span class="red">*</span></div>
+              <input type="password">
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="forgt_pswd"><a id="frgtpsw" href="#">Forgot User Name/Password?</a></div>
+            </div>
+            <!-- close txt label container -->
+            <div class="txtbox_lbl_container">
+              <div class="login_btn_inner">
+                <input onClick="window.location = 'welcome.html';"  type="button"/>
+              </div>
+            </div>
+            <!-- close txt label container -->
+          </div>
+          <!-- close registration container -->
+        </div>
+        <!-- id regcontainer -->
+        <div id="showfrgtpsw">
+          <div class="frgt_psw_heading">Forgot your USER NAME or Password?</div>
+          <div class="frgt_psw_content">Enter your user name or email address and the two words in the form below. <br/>
+            Then, we’ll send you an email with your user name and information on resetting your password. </div>
+          <div class="frgtpwd_txtbx_cont">
+            <div class="txtbox_lbl_container">
+              <div class="txt_lbl">User Name <span class="red">*</span></div>
+              <input type="text">
+            </div>
+            <!-- close txt label container -->
+          </div>
+          <div class="frgt_psw_content">Please enter the words you see in the box, in order and separated by a space.</div>
+          <div class="captcha_cont"><img src="images/captcha.jpg"/></div>
+          <div class="frgt_pswd_sbmit">
+            <input type="button"/>
+          </div>
+           </div>
+        <div id="thankyou">
+          <div class="thankyou_container">
+            <div class="thankyou_heading">THANk you for registering!</div>
+            <div class="thankyou_content">You are now logged in with the user name
+              <insertusername>
+              , which means you can now join the leaderboard as you test your precision, and see how you compare to others.</div>
+            <a class="close-panel">
+            <div class="thankyou_close_btn">
+              <input type="button"/>
+            </div>
+            </a> </div>
+        </div>
+        <!-- close thank you -->
+      </div>
+      <!-- light box panel -->
+      <div id="lightbox"></div>
+      <!-- /lightbox -->
+    </div>
+    <div class="privacy_lrg_container">
+      <div class="content_nav">
+        <ul>
+          <li class="first"><a class="show">Privacy Policy</a></li>
+          <li class="second"><a class="showcon">Contact Us</a></li>
+        </ul>
+        <div class="showpp">
+          <div class="cross_btn"><a class="hide"><img src="images/cross_btn.png"/></a></div>
+          <p><strong>State Street Global Advisors Privacy Policy</strong></p>
+          <p>If you voluntarily provide personal information such as an email address when inquiring about State Street or its products and services, we use that personal information to improve our services to you, to provide information to you and to inform you about additional products or services that may be of interest to you. State Street does not share your personal information with unaffiliated third parties, except as required by law. </p>
+          <p class="mrgB0">You can opt out of our use of non-public, personally identifiable information we collect in order to send you separate online marketing and advertising materials by clicking on an “unsubscribe” link in our marketing emails.<br/>
+            <a href="http://www.spdrs.com/general/privacy/" target="_blank">http://www.spdrs.com/general/privacy/</a> <br/>
+            <br/>
+            <br/>
+            <a class="hide">Close</a></p>
+        </div>
+        <div class="contactus" style="display:none;">
+          <div class="cross_btn"><a class="hidecon"><img src="images/cross_btn.png"/></a></div>
+          <p>Learn more about State Street SPDR ETFs.<br/>
+            Please have a State Street Global Advisors associate contact me. </p>
+          <div class="requiredfild_txt"><span class="red">*</span> Required Fields</div>
+          <div class="form_container">
+            <form>
+              <div class="contactus_left_part">
+                <div class="contactus_txtbox_container">
+                  <label>First Name <span class="red">*</span></label>
+                  <input type="text"/>
+                </div>
+                <div class="contactus_txtbox_container mrgL25">
+                  <label>Last Name <span class="red">*</span></label>
+                  <input type="text"/>
+                </div>
+                <div class="contactus_txtbox_container">
+                  <label>Firm Name <span class="red">*</span></label>
+                  <input type="text"/>
+                </div>
+                <div class="contactus_txtbox_container mrgL25">
+                  <label>Email <span class="red">*</span></label>
+                  <input type="text"/>
+                </div>
+                <div class="contactus_txtbox_container width235px">
+                  <label>Business Phone (Ex:XXX-XXX-XXXX) <span class="red">*</span></label>
+                  <input class="width205px" type="text"/>
+                </div>
+              </div>
+              <!-- close contact us left part -->
+              <div class="contactus_right_part">
+                <div class="contactus_textarea_container">
+                  <label>Comments</label>
+                  <textarea></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- close form container -->
+          <div class="form_footer">Questions? <br/>
+            Call State Street Global Advisors at 1.866.787.2257.
+            <div class="submit_btn">
+              <input type="button"/>
+            </div>
+            <div class="cancel_form"><a href="#">Cancel</a></div>
+          </div>
+          <!-- close form footer -->
+        </div>
+        <!-- contact us -->
+      </div>
+      <!-- close content nav -->
+    </div>
+    <!-- close privacy lrg container -->
+    <div class="iri_container">
+      <div class="ssga_logo"><img src="images/ssga_logo.png"/></div>
+      <div class="iri_header">Important Risk Information:<br/>
+        <br/>
+        Before investing, consider the funds’ investment objectives, risks, charges and expenses. To obtain a prospectus or summary prospectus, which contains this and other information, call 1.866.787.2257 or visit <a href="http://www.spdrs.com" target="_blank">www.spdrs.com</a>. Read it carefully.</div>
+      <p>ETFs trade like stocks, fluctuate in market value and may trade at prices above or below the ETFs’ net asset value. Brokerage commissions and ETF expenses will reduce returns.</p>
+      <p>The SPDR S&amp;P 500 ETF Trust, SPDR S&amp;P MidCap 400 ETF Trust and the SPDR Dow Jones Industrial Average ETF Trust are unit investment trusts and issue shares intended to track performance of their respective benchmarks.</p>
+      <p>“SPDR,” S&amp;P, S&amp;P 500 and S&amp;P MidCap 400 are registered trademarks of Standard &amp; Poor’s Financial Services, LLC (“S&amp;P) and have been licensed for use by State Street Corporation. No financial product offered by State Street or its affiliates is sponsored, endorsed, sold or promoted by S&amp;P. </p>
+      <p>Distributor: State Street Global Markets, LLC, member <a href="#" target="_blank">FINRA</a>, <a href="#" target="_blank">SIPC</a>, a wholly owned subsidiary of State Street Corporation. Reference to State Street may include State Street Corporation and its affiliates. Certain State Street affiliates provide services and receive fees from the SPDR ETFs. ALPS Distributors, Inc. is distributor for SPDR S&amp;P 500 ETF Trust, SPDR S&amp;P MidCap 400 ETF Trust and SPDR Dow Jones Industrial Average ETF Trust, all unit investment trusts, and the Select Sector SPDRs Trust.</p>
+      <p>IBG - 6838</p>
+    </div>
+    <!-- close iri container -->
+  </div>
+  <!-- close center container -->
+</div>
+<!-- close content_bg -->
+<div class="footer_container"> </div>
+<!-- close footer container -->
+
+<!-- Javascript for Contact us -->
+<script type="text/javascript">
+		$(".show").click(function () {
+ 		  $(".showpp").show('slow');
+		  $(".content_nav ul li.first").addClass('arrow_down');
+		  $(".content_nav ul li.second").removeClass('arrow_down');
+		  $(".contactus").hide(0);
+		});
+		$(".hide").click(function () {
+		  $(".showpp").hide(1000);								   
+ 		  $(".content_nav ul li.first").removeClass('arrow_down');
+		});
+		// for contact us
+		$(".showcon").click(function () {
+ 		  $(".contactus").show('slow');
+		  $(".content_nav ul li.second").addClass('arrow_down');
+		  $(".content_nav ul li.first").removeClass('arrow_down');
+		  $(".showpp").hide(0);
+		});
+		$(".hidecon").click(function () {
+		  $(".contactus").hide(1000);		
+		  $(".content_nav ul li.first").removeClass('arrow_down');
+ 		  $(".content_nav ul li.second").removeClass('arrow_down');
+		});
+</script>
+<!-- Javascript for show forget pasword container -->
+<script type="text/javascript">
+		$("#frgtpsw").click(function () {
+ 		  $("#showfrgtpsw").show('slow');
+		  $("#regcontainer").hide('slow');
+		});
+		$("#frgtpsw_cancel").click(function () {	
+		  $("#regcontainer").show('slow');
+		  $("#showfrgtpsw").hide('slow');
+		});
+</script>
+<!-- Javascript for show Thank you text -->
+<script type="text/javascript">
+		$("#showthankyou").click(function () {
+ 		  $("#thankyou").show('slow');
+		  $("#regcontainer").hide('slow');
+		})
+</script>
+<!-- Javascript for show sent email -->
+<script type="text/javascript">
+		$("#showemailsent").click(function () {
+ 		  $("#emailsent").show('slow');
+		  $(".email_container").hide('slow');
+		})
+		$("#sendagain").click(function () {	
+		  $(".email_container").show('slow');
+		   $("#emailsent").hide('slow');
+		});
+</script>
+</head>
+</body>
+</html>
