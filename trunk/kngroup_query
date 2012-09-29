@@ -1,0 +1,13 @@
+SELECT n.nid nid, lg.field_logo_fid logo , ad.field_address_value address , mx.field_max_cost_value maximum , mn.field_min_cost_value minimum,fm.filename image, ct.name city, n.title title
+FROM kg_node n, kg_field_data_field_city loc, kg_taxonomy_term_data ct, kg_field_data_field_gallery gal, kg_file_managed fm,kg_field_data_field_address ad ,kg_field_data_field_max_cost mx,kg_field_data_field_min_cost mn,kg_field_data_field_developer dv,kg_field_revision_field_logo lg
+WHERE n.type = 'residential'
+AND loc.entity_id = n.nid
+AND loc.field_city_tid = ct.tid
+AND gal.entity_id = n.nid
+AND gal.field_gallery_fid = fm.fid
+AND ad.entity_id = n.nid
+AND mx.entity_id = n.nid
+AND mn.entity_id = n.nid
+AND dv.entity_id=n.nid
+AND dv.field_developer_tid = lg.entity_id
+
