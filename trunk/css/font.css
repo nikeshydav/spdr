@@ -1,0 +1,21 @@
+@font-face {
+ font-family: 'UniversLTStd-UltraCn';
+ src: url('../font/universltstd-ultracn.eot');
+ src: url('../font/universltstd-ultracn.eot?#iefix') format('embedded-opentype'),  url('../font/universltstd-ultracn.woff') format('woff'),  url('../font/universltstd-ultracn.ttf') format('truetype'),  url('../font/universltstd-ultracn.svg#universltstd-ultracn') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+ @font-face {
+ font-family: 'UniversCom-57Condensed';
+ src: url('../font/universcom-57condensed.eot');
+ src: url('../font/universcom-57condensed.eot?#iefix') format('embedded-opentype'), url('../font/universcom-57condensed.woff') format('woff'), url('../font/universcom-57condensed.ttf') format('truetype'), url('../font/universcom-57condensed.svg#universcom-57condensed') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+ @font-face {
+ font-family: 'UniversCom-85XBlack';
+ src: url('../font/universcom-85xblack.eot');
+ src: url('../font/universcom-85xblack.eot?#iefix') format('embedded-opentype'), url('../font/universcom-85xblack.woff') format('woff'), url('../font/universcom-85xblack.ttf') format('truetype'), url('../font/universcom-85xblack.svg#universcom-85xblack') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
