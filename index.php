@@ -1,12 +1,6 @@
 <?php
-session_start(); 
+session_start();
 include_once("include/config.php");
-
-if(isset($_GET["logout"]) && $_GET["logout"]==1){
-	//User clicked logout button, distroy all session variables.}
-	session_destroy();
-	header('Location: '.$return_url);
-}
 ?>
 <!DOCTYPE html>
 <html  xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en-gb" lang="en-gb" >
@@ -23,6 +17,7 @@ if(isset($_GET["logout"]) && $_GET["logout"]==1){
 <script src="js/jquery.localscroll-1.2.7-min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/coda-slider.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<meta property="og:image" content="http://spdr.projectshowcase.info/images/fbimage.jpg"/>
 <script>
 function AjaxResponse(){
 	 var myData = 'connect=1'; //For demo, we will pass a post variable, Check process_facebook.php
@@ -32,10 +27,13 @@ function AjaxResponse(){
 	 dataType:"html",
 	 data:myData,
 	 success:function(response){
-	 $("#results").html('<fieldset style="padding:20px">'+response+'</fieldset>'); //Result
- },
+	 //$("#results").html('<fieldset style="padding:20px">'+response+'</fieldset>'); //Result
+	  $makeLogin();
+	  $('#results').css({'display':'none'});
+	   },
 	 error:function (xhr, ajaxOptions, thrownError){
-	 $("#results").html('<fieldset style="padding:20px;color:red;">'+thrownError+'</fieldset>'); //Error
+	 //$("#results").html('<fieldset style="padding:20px;color:red;">'+thrownError+'</fieldset>'); //Error
+	 alert('Thier is some error please try again.');
  	}
  });
  }
@@ -53,7 +51,6 @@ function ResetAnimate() //Reset User button
 }
 </script> 
 <script type="text/javascript" src="http://apis.google.com/js/plusone.js"> </script>
-<script type="teext/javascript" src="js/jquery.maskedinput-1.3.min.js"></script>
 </head>
 <body>
 <div class="header_container">
@@ -65,7 +62,7 @@ function ResetAnimate() //Reset User button
         <div id="show-email" class="email_icon"></div>
         </a></div>
       <div class="share_bg">
-        <a href="http://twitter.com/home?status=this%20is%20test" onclick="javascript:window.open(this.href,'','width=500,height=500');return false;"  target="_blank"> <div class="fb_icon"></div></a>
+        <a href="http://twitter.com/home?status=I%20just%20Tested%20my%20%23%20Precision.%20Why%20not%20test%20%20yours%3F%20Go%20to%20www.spdrs.com%2Ftestmyprecision." onclick="javascript:window.open(this.href,'','width=500,height=500');return false;"  target="_blank"> <div class="fb_icon"></div></a>
       </div>
       <div class="share_bg">
         <div id="show-fb" class="twitter_icon"></div>
@@ -115,11 +112,17 @@ function ResetAnimate() //Reset User button
             </div>
             <div class="email_lbl_txt_con width95perc">
               <div class="email_txt_lbl"><em>Add a custom message: Please limit your message to 500 characters.</em> </div>
-              <textarea id="email_msg"></textarea>
-              <div id="captchaStatus"></div>
+              <textarea id="email_msg" onchange="LimitText(this,0,500);" onkeydown="LimitText(this,0,500);" onblur="LimitText(this,0,500);" ></textarea>                           
 			</div>
             
-            <div class="email_lbl_txt_con width95perc" id="recptcha"></div>            
+            <div class="email_lbl_txt_con width95perc">
+            	<div class="email_txt_lbl font12 fontnormal mrgB10">Please enter the words you see in the box, in order and separated by a space. <span class="red">*</span>
+            		<div class="mrgB10"></div>
+              	<div id="captchaStatus"></div>  
+              	<div id="recptcha"></div>            	
+              </div> 
+            	
+            </div>            
           </div>
           <!-- close email header left -->
           <div class="email_header_right">
@@ -183,10 +186,11 @@ function ResetAnimate() //Reset User button
         <div class="light_box_cross_btn"><span>Close</span> <img src="images/cross_btn.png"/></div>
         </a>
         <div class="gmail_link">
-        	<span id="gcontent"><a href="https://plus.google.com/share?url=fb.com" onclick="javascript:window.open('https://plus.google.com/share?url=fb.com','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+        	<span id="gcontent" style="margin-top: 5px;float: left;"></span>
+        	<a href="https://plus.google.com/share?url=fb.com" onclick="javascript:window.open('https://plus.google.com/share?url=http://spdr.projectshowcase.info','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
         		<img src="images/gmail_btns.png">
-        	</a>	
-        	</span>
+        	</a>
+        	
         
 
 <!-- Place this tag after the last share tag. -->
@@ -204,7 +208,7 @@ function ResetAnimate() //Reset User button
                   <h1>stop the train <br/>
                     in front of <br/>
                     the commuters.</h1>
-                  <p>Once the train starts moving, click the “stop�? button to make the doors open in the right place.</p>
+                  <p>Once the train starts moving, click the "stop" button to make the doors open in the right place.</p>
                   <div class="box_btn">
                     <div class="btn"><a href="#">START</a></div>
                   </div>
@@ -341,7 +345,7 @@ function ResetAnimate() //Reset User button
         </a>
         <div id="regcontainer">
           <div class="fb_btn_contnr">
-            <div class="fb_btn"><img src="images/fb.png"/></div>
+            <div class="fb_btn"><img src="images/fb.png"></div>
           </div>
           <div class="register_container">
             <div class="heading">Register</div>
@@ -458,7 +462,7 @@ function ResetAnimate() //Reset User button
           <div class="cross_btn"><a class="hide"><img src="images/cross_btn.png"/></a></div>
           <p><strong>State Street Global Advisors Privacy Policy</strong></p>
           <p>If you voluntarily provide personal information such as an email address when inquiring about State Street or its products and services, we use that personal information to improve our services to you, to provide information to you and to inform you about additional products or services that may be of interest to you. State Street does not share your personal information with unaffiliated third parties, except as required by law. </p>
-          <p class="mrgB0">You can opt out of our use of non-public, personally identifiable information we collect in order to send you separate online marketing and advertising materials by clicking on an “unsubscribe�? link in our marketing emails.<br/>
+          <p class="mrgB0">You can opt out of our use of non-public, personally identifiable information we collect in order to send you separate online marketing and advertising materials by clicking on an "unsubscribe" link in our marketing emails.<br/>
             <a href="http://www.spdrs.com/general/privacy/" target="_blank">http://www.spdrs.com/general/privacy/</a> <br/>
             <br/>
             <br/>
@@ -490,7 +494,7 @@ function ResetAnimate() //Reset User button
                 </div>
                 <div class="contactus_txtbox_container width235px">
                   <label>Business Phone (Ex:XXX-XXX-XXXX) <span class="red">*</span></label>
-                  <input class="width205px" type="text"  id="mb_contact"/>
+                  <input class="width205px" type="text"  id="mb_contact" onchange="formatPhoneNumber(this.value);"  onkeydown="formatPhoneNumber(this.value);" onblur="formatPhoneNumber(this.value);"/>
                 </div>
               </div>
               <!-- close contact us left part -->
@@ -508,7 +512,7 @@ function ResetAnimate() //Reset User button
             <div class="submit_btn">
               <input type="button"/>
             </div>
-            <div class="cancel_form"><a href="#">Cancel</a></div>
+            <div class="cancel_form"><a href="#contcus_form_cancel" id="contcus_form_cancel">Cancel</a></div>
           </div>
           <!-- close form footer -->
         </div>
@@ -524,7 +528,7 @@ function ResetAnimate() //Reset User button
         Before investing, consider the funds’ investment objectives, risks, charges and expenses. To obtain a prospectus or summary prospectus, which contains this and other information, call 1.866.787.2257 or visit <a href="http://www.spdrs.com" target="_blank">www.spdrs.com</a>. Read it carefully.</div>
       <p>ETFs trade like stocks, fluctuate in market value and may trade at prices above or below the ETFs’ net asset value. Brokerage commissions and ETF expenses will reduce returns.</p>
       <p>The SPDR S&amp;P 500 ETF Trust, SPDR S&amp;P MidCap 400 ETF Trust and the SPDR Dow Jones Industrial Average ETF Trust are unit investment trusts and issue shares intended to track performance of their respective benchmarks.</p>
-      <p>“SPDR,�? S&amp;P, S&amp;P 500 and S&amp;P MidCap 400 are registered trademarks of Standard &amp; Poor’s Financial Services, LLC (“S&amp;P) and have been licensed for use by State Street Corporation. No financial product offered by State Street or its affiliates is sponsored, endorsed, sold or promoted by S&amp;P. </p>
+      <p>"SPDR", S&amp;P, S&amp;P 500 and S&amp;P MidCap 400 are registered trademarks of Standard &amp; Poor’s Financial Services, LLC (“S&amp;P) and have been licensed for use by State Street Corporation. No financial product offered by State Street or its affiliates is sponsored, endorsed, sold or promoted by S&amp;P. </p>
       <p>Distributor: State Street Global Markets, LLC, member <a href="#" target="_blank">FINRA</a>, <a href="#" target="_blank">SIPC</a>, a wholly owned subsidiary of State Street Corporation. Reference to State Street may include State Street Corporation and its affiliates. Certain State Street affiliates provide services and receive fees from the SPDR ETFs. ALPS Distributors, Inc. is distributor for SPDR S&amp;P 500 ETF Trust, SPDR S&amp;P MidCap 400 ETF Trust and SPDR Dow Jones Industrial Average ETF Trust, all unit investment trusts, and the Select Sector SPDRs Trust.</p>
       <p>IBG - 6838</p>
     </div>
@@ -535,84 +539,26 @@ function ResetAnimate() //Reset User button
 <!-- close content_bg -->
 <div class="footer_container"> </div>
 <!-- close footer container -->
-
-<!-- Javascript for Contact us -->
-<script type="text/javascript">
-		$(".show").click(function () {
- 		  $(".showpp").show('slow');
-		  $('html, body').animate({
-   			 scrollTop: $(".content_nav").offset().top
-			}, 2000);
-		  
-		  $(".content_nav ul li.first").addClass('arrow_down');
-		  $(".content_nav ul li.second").removeClass('arrow_down');
-		  $(".contactus").hide(0);
-		});
-		$(".hide").click(function () {
-		  $(".showpp").hide(1000);								   
- 		  $(".content_nav ul li.first").removeClass('arrow_down');
-		});
-		// for contact us
-		$(".showcon").click(function () {
- 		  $(".contactus").show('slow');
- 		  $('#mb_contact').mask('999-999-9999');
-		  $('html, body').animate({
-   			 scrollTop: $(".content_nav").offset().top
-			}, 2000);
-		  $(".content_nav ul li.second").addClass('arrow_down');
-		  $(".content_nav ul li.first").removeClass('arrow_down');
-		  $(".showpp").hide(0);		  
-		});
-		$(".hidecon").click(function () {
-		  $(".contactus").hide(1000);		
-		  $(".content_nav ul li.first").removeClass('arrow_down');
- 		  $(".content_nav ul li.second").removeClass('arrow_down');
-		});
-</script>
-<!-- Javascript for show forget pasword container -->
-<script type="text/javascript">
-		$("#frgtpsw").click(function () {
- 		  $("#showfrgtpsw").show('slow');
-		  $("#regcontainer").hide('slow');
-		  Recaptcha.create("6LcyQ9cSAAAAAM1SCLplMLj16bZDOaTIpImhSyBL", 'captcha_cont', {theme: "clean"});
-		});
-		$("#frgtpsw_cancel").click(function () {	
-		  $("#regcontainer").show('slow');
-		  $("#showfrgtpsw").hide('slow');
-		});
-</script>
-
+<script type="text/javascript" src="js/jquery.maskedinput-1.3.min.js"></script>
 <script type="text/javascript" src="js/js.js" > </script>
 
-
-
-<!-- 
-
 <?php
-if(!isset($_SESSION['logged_in']))
-{
+if(!isset($_SESSION['logged_in'])){
 ?>
-    <div id="results">
-    </div>
+    <div id="results"></div>
     <div id="LoginButton">
-    <div class="fb-login-button" onlogin="javascript:CallAfterLogin();" size="medium" scope="<?php echo $fbPermissions; ?>">Connect With Facebook</div>
+    
     </div>
-<?php
-}
-else
-{
-	echo 'Hi '. $_SESSION['user_name'].'! You are Logged in to facebook, <a href="?logout=1">Log Out</a>.';
-}
-?>
-
+<?php } ?>
 <div id="fb-root"></div>
 <script type="text/javascript">
+
 window.fbAsyncInit = function() {
 FB.init({appId: '<?php echo $appId; ?>',cookie: true,xfbml: true,channelUrl: '<?php echo $return_url; ?>channel.php',oauth: true});};
 (function() {var e = document.createElement('script');
 e.async = true;e.src = document.location.protocol +'//connect.facebook.net/en_US/all.js';
 document.getElementById('fb-root').appendChild(e);}());
-/*
+
 function CallAfterLogin(){
 		FB.login(function(response) {		
 		if (response.status === "connected") 
@@ -632,18 +578,19 @@ function CallAfterLogin(){
 		 }
 	});
 }
-*/
-/</script>
--->
+</script>
+
 <?php
  if(isset( $_SESSION['playername'])){
  	?>
  	<script type="text/javascript" >
  		$(document).ready(function(){
- 				$makeLogin(); 				
+ 				$makeLogin();
+ 				$('#LoginButton').css({'display':'none'}); 				
  		}); 		
  	</script>
  	
 <?php  } ?>
+
 </body>
 </html>

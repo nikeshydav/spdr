@@ -9,6 +9,9 @@
     width: 14px;
 }
 .clear{clear:both;}
-#fbcontent{padding: 20px;height: 240px}
+#fbcontent{padding: 20px;height: 300px}
 .email_sent_recp{width: 97% !important;}
-#gmail-panel{height: 291px;}
+#gmail-panel{height: 450px;}
+.captcha_cont{}
+#recaptcha_area{background:none repeat scroll 0 0 #FFFFFF;width: 476px }
+.recaptchatable{}
