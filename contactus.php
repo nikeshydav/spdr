@@ -7,11 +7,12 @@ $com=$_GET['com'];
 
 $to= 'nikesh.yadav@gmail.com';
 $subject="Contact Us Email";
-$message = "Name  :  $user". "<br />";
-$message .= "Email :  $email ". "<br />";
-$message .= "Firm Name: $firm ". "<br />";
-$message .= "Phone : $Phone ". "<br />";
-$message .= "Comments: $com ";
+$message = "
+Name  :  $user \r\n
+Email :  $email \r\n
+Firm Name: $firm \r\n
+Phone : $Phone \r\n
+Comments: $com ";
 
 $headers = 'From: '.$user.'<'. $to .'>'. "\r\n" .
 'Reply-To:'.$user.'<'. $to .'>' . "\r\n" .
