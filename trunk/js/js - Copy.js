@@ -390,30 +390,29 @@ function CreateNewLikeButton(url)
 		$("#emailbox_backlight, #fb-panel").fadeIn(300);
 		$(".twitter_icon").addClass('twitter_icon_active');
 		$('#fbcontent').html('');
-		$('#fbcontent').html('<div id="fb-root"></div><div class="fb-like" data-href="http://spdr.projectshowcase.info/?t=t" data-send="true" data-width="450" data-show-faces="true"></div>');
-		(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=391331457606211";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+		$('#fbcontent').html('<div id="fb-root"></div><div class="fb-like" data-href="http://google.com" data-send="true" data-width="450" data-show-faces="true"></div>');
+		$(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=391331457606211";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
 			
-			CreateNewLikeButton("http://spdr.projectshowcase.info/?t=t");
+			CreateNewLikeButton("http://www.google.ca");
 
 	});
 	
 	$("#show-gmail").click(function(){
 		$("#emailbox_backlight, #gmail-panel").fadeIn(300);
 		$(".gmail_icon").addClass('gmail_icon_active');
-		//$('#gcontent').html('');
-		$('#gcontent').append('<script src="https://apis.google.com/js/plusone.js"></script><g:plusone></g:plusone>');
+		$('#gcontent').html('');
+		$('#gcontent').html('<script src="https://apis.google.com/js/plusone.js"></script><g:plusone></g:plusone>');
 		
 		
 	});
 	
 	$("#show-email").click(function(){
-		$('.hidecon').trigger('click');
 		$("#emailbox_backlight, #email-panel").fadeIn(300);
 		$(".email_icon").addClass('email_icon_active');	
 		 Recaptcha.create("6LcyQ9cSAAAAAM1SCLplMLj16bZDOaTIpImhSyBL", 'recptcha', {theme: "clean"});	
@@ -427,17 +426,15 @@ function CreateNewLikeButton(url)
 	  $("#lightbox, #lightbox-panel").fadeIn(300);
 	  $('.hidecon').trigger('click');
 	  
-	  var elem = $(document.createElement("div"));
-	    elem.attr("class", "fb-login-button");
-	    elem.attr("onlogin", "javascript:CallAfterLogin();");
-	    elem.attr("size", "large");
-	    elem.attr("scope", "publish_stream,email");    
-	    $("div.fb_btn").empty().append(elem);  
-	    $('.fb-login-button').html('Connect with Facebook');  
-	    FB.XFBML.parse($("div.fb_btn").get(0));    
-	    $('.pluginFaviconButtonText').html('Connect with Facebook');
-    
-    
+	var elem = $(document.createElement("div"));
+    elem.attr("class", "fb-login-button");
+    elem.attr("onlogin", "javascript:CallAfterLogin();");
+    elem.attr("size", "large");
+    elem.attr("scope", "publish_stream,email");    
+    $("div.fb_btn").empty().append(elem);  
+    $('.fb-login-button').html('Connect with Facebook');  
+    FB.XFBML.parse($("div.fb_btn").get(0));    
+    $('.pluginFaviconButtonText').html('Connect with Facebook');
 	});
 	
 	$(".close-email-panel, .light_box_cross_btn, .cancel_regis").click(function(){
@@ -452,47 +449,48 @@ function CreateNewLikeButton(url)
 		$('input').removeClass('invalid');
 		$('input, textarea').val('');
 		$('textarea').text('');
-		$('.hidecon').trigger('click');
 	});
 	
-	// Home page
+	$('.hidecon').click(function(){
+		$('input').removeClass('invalid');
+		$('input, textarea').val('');
+		$('textarea').text('');
+	});
+	
+	
+	
+//	END DOC ready
 		$(".show").click(function () {
- 		  $(".showpp").slideDown('slow');
+ 		  $(".showpp").show('slow');
 		  $('html, body').animate({
    			 scrollTop: $(".content_nav").offset().top
 			}, 2000);
 		  
 		  $(".content_nav ul li.first").addClass('arrow_down');
 		  $(".content_nav ul li.second").removeClass('arrow_down');
-		  $(".contactus").slideUp(700);
+		  $(".contactus").hide(0);
 		});
-
 		$(".hide").click(function () {
-		  $(".showpp").slideUp(700);								   
+		  $(".showpp").hide(1000);								   
  		  $(".content_nav ul li.first").removeClass('arrow_down');
 		});
-
 		// for contact us
 		$(".showcon").click(function () {
- 		  $(".contactus").slideDown('slow'); 		  
+ 		  $(".contactus").show('slow'); 		  
  		  
 		  $('html, body').animate({
    			 scrollTop: $(".content_nav").offset().top
 			}, 2000);
 		  $(".content_nav ul li.second").addClass('arrow_down');
 		  $(".content_nav ul li.first").removeClass('arrow_down');
-		  $(".showpp").slideUp(700);	
+		  $(".showpp").hide(0);	
 		  $.mask.definitions['~']='[+-]';	  
 		  $('#mb_contact').mask('999-999-9999');
 		});
-
-		$(".hidecon, .cancel_form").click(function () {
-		  $(".contactus").slideUp(700);	
+		$(".hidecon, #contcus_form_cancel, .cancel_form a").click(function () {
+		  $(".contactus").hide(1000);		
 		  $(".content_nav ul li.first").removeClass('arrow_down');
  		  $(".content_nav ul li.second").removeClass('arrow_down');
- 		  $('input').removeClass('invalid');
-		  $('input, textarea').val('');
-		  $('textarea').text('');
 		});
 		
 		$("#frgtpsw").click(function () {
@@ -504,12 +502,7 @@ function CreateNewLikeButton(url)
 		  $("#regcontainer").show('slow');
 		  $("#showfrgtpsw").hide('slow');
 		});
-
-
-
-		
-		//	END DOC ready
-
+		///End		
 			
 });
 
@@ -537,46 +530,4 @@ function formatPhoneNumber(phoneNumber) {
     }
 }
 
-
-
-
-window.onorientationchange = function(){
-
-	var scrollleftv= $('.scroll').scrollLeft()
-    var orientation = window.orientation;
-    // Look at the value of window.orientation:
-    if (orientation === 0){
-        // iPad is in Portrait mode.
-		//alert($('.scroll').scrollLeft());
-		if(scrollleftv==800)
-			$('.scroll').scrollLeft(938);
-		if(scrollleftv==1600)
-			$('.scroll').scrollLeft(1876);
-
-    }
-    else if (orientation === 90){
-        // iPad is in Landscape mode. The screen is turned to the left.
-		//alert($('.scroll').scrollLeft());
-		if(scrollleftv==938)
-			$('.scroll').scrollLeft(800);
-		if(scrollleftv==1876)
-			$('.scroll').scrollLeft(1600);
-    }
-    else if (orientation === -90){
-        // iPad is in Landscape mode. The screen is turned to the right.
-		//alert($('.scroll').scrollLeft());
- 		if(scrollleftv==938)
-			$('.scroll').scrollLeft(800);
-		if(scrollleftv==1876)
-			$('.scroll').scrollLeft(1600);
-   }    else if (orientation === 180){
-        // iPad is in Landscape mode. The screen is turned to the right.
-		if(scrollleftv==800)
-			$('.scroll').scrollLeft(938);
-		if(scrollleftv==1600)
-			$('.scroll').scrollLeft(1876);
-    }
-
-
-}
 
